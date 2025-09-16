@@ -1,0 +1,25 @@
+{
+  "sobre": "About me",
+  "experiencia": "Experience",
+  "habilidades": "Technologies",
+  "projetos": "Projects",
+  "contato":"Contact",
+  "engenheiroSoftware":"Software Engineer",
+  "sobreMim":"About me",
+  "textoSobreMim":"Bachelor in Computer Science, passionate about software development. I mainly work as a back-end developer, with extensive experience in system integrations and fiscal solutions (NF-e, NFC-e, CT-e, MDF-e, NFS-e, and Sped Fiscal). Additionally, I have experience in designing and developing new systems from conception to implementation, always aiming for efficiency, scalability, and innovation.",
+  "experienciaUnoesc":"I began my journey in the technology field working as a technical support specialist, performing computer maintenance and providing direct assistance to company users, ensuring the proper functioning of systems and the continuity of operations.",
+  "experienciaSyscon":"My first opportunity in the software development field. I worked directly on the maintenance and evolution of the company’s main system, being responsible for implementing new fiscal integrations, as well as performing adjustments and improvements to existing functionalities.",
+  "experienciaSimetris":"I actively participate in the design and development of a complete new enterprise management system, taking responsibility for the back-end development of the project. My work focuses on ensuring efficiency, scalability, and innovation, contributing to the creation of a robust solution capable of meeting the business’s needs.",
+  "atualmente":"Present",
+  "discordDescricao":"Integration for communication via Discord.",
+  "portifolioDescricao":"Creation of this portfolio.",
+  "todoListDescricao":"Task list application using Angular.",
+  "participacoesOpenSource":"Contributions to Open Source Projects",
+  "javaCteDescricao":"Implemented submission of simplified CT-e.",
+  "javaNfeDescricao":"Adjustment in NF-e contingency submission.",
+  "gostouMeuPerfil":"Do you like my profile?",
+  "entrarContato":"Feel free to contact me.",
+  "versaoIdioma":"Versao em português",
+  "idioma":"pt"
+
+}
