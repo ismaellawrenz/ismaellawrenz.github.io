@@ -1,4 +1,4 @@
-<template>     
+<template>
   <section class="h-screen flex flex-col dark:bg-gray-950 text-white ">
     <header class="w-full text-white">
       <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
@@ -10,14 +10,21 @@
         <nav class=" hidden sm:block">
           <ul class="flex space-x-10 p-4">
 
-            <li><a href="#" class="hover:text-green-500 hover:underline underline-offset-4">Inicio</a></li>
-            <li><a href="#sobre" class="hover:text-green-500 hover:underline underline-offset-4">Sobre</a></li>
-            <li><a href="#experiencia" class="hover:text-green-500 hover:underline underline-offset-4">Experiência</a>
+            <li><a href="#sobre" class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("sobre") }}</a>
             </li>
-            <li><a href="#projetos" class="hover:text-green-500 hover:underline underline-offset-4">Projetos</a></li>
-            <li><a href="#habilidades" class="hover:text-green-500 hover:underline underline-offset-4">Habilidades</a>
+            <li><a href="#experiencia"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t('experiencia') }}</a>
             </li>
-            <li><a href="#contato" class="hover:text-green-500 hover:underline underline-offset-4">Contato</a></li>
+            <li><a href="#projetos"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("projetos") }}</a></li>
+            <li><a href="#habilidades"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("habilidades") }}</a>
+            </li>
+            <li><a href="#contato" class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("contato") }}</a>
+            </li>
+            <li><a href="" @click.prevent="reloadToEnOrPt($t('idioma'))"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("versaoIdioma") }}</a></li>
+            
           </ul>
         </nav>
         <!--Mobile-->
@@ -35,14 +42,21 @@
         ]">
           <ul
             class="flex flex-col md:flex-row md:space-x-18 gap-7  text-center  w-100 bg-gray-600 p-3 rounded-2xl shadow-lg">
-            <li><a href="#" class="hover:text-green-500 hover:underline underline-offset-4 text-left">Inicio</a></li>
-            <li><a href="#sobre" class="hover:text-green-500 hover:underline underline-offset-4">Sobre</a></li>
-            <li><a href="#experiencia" class="hover:text-green-500 hover:underline underline-offset-4">Experiência</a>
+            <li><a href="#sobre" class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("sobre") }}</a>
             </li>
-            <li><a href="#projetos" class="hover:text-green-500 hover:underline underline-offset-4">Projetos</a></li>
-            <li><a href="#habilidades" class="hover:text-green-500 hover:underline underline-offset-4">Habilidades</a>
+            <li><a href="#experiencia"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("experiencia") }}</a>
             </li>
-            <li><a href="#contato" class="hover:text-green-500 hover:underline underline-offset-4">Contato</a></li>
+            <li><a href="#projetos"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("projetos") }}</a></li>
+            <li><a href="#habilidades"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("habilidades") }}</a>
+            </li>
+            <li><a href="#contato" class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("contato") }}</a>
+            </li>
+            <li><a href="" @click.prevent="reloadToEnOrPt($t('idioma'))"
+                class="hover:text-green-500 hover:underline underline-offset-4">{{ $t("versaoIdioma") }}</a></li>
+            
           </ul>
         </nav>
 
@@ -53,7 +67,8 @@
 
       <div class="space-y-4">
         <h1 class="text-5xl font-bold">Ismael Luan Lawrenz</h1>
-        <span class="text-2xl border-b border-green-500 pb-1 typing">Engenheiro de software.</span>
+        <span class="text-2xl border-b border-green-500 pb-1 typing"
+          :style="{ '--characters': $t('engenheiroSoftware').length }">{{ $t("engenheiroSoftware") }}.</span>
         <div class="flex gap-4">
           <a href="https://www.linkedin.com/in/ismael-luan-lawrenz-406259224"
             class="h-10 w-10 bg-gray-800 flex items-center justify-center rounded-lg hover:text-green-500 hover:border-green-500 border border-transparent">
@@ -96,61 +111,48 @@
 
   </section>
   <section id="sobre" class="min-h-screen flex flex-col items-center justify-center dark:bg-black text-white gap-5 ">
-    <h3 class="text-4xl font-bold">Sobre mim</h3>
-    <p class="text-2xl text-center max-w-5xl leading-relaxed ml-6 mr-6">Bacharel em Ciência da Computação, apaixonado
-      por
-      desenvolvimento de software. Atuo principalmente como desenvolvedor back-end, com ampla experiência em integração
-      entre sistemas e soluções fiscais (NF-e, NFC-e, CT-e, MDF-e, NFS-e e Sped Fiscal). Além disso, possuo experiência
-      na criação e elaboração de novos sistemas, desde a concepção até a implementação, sempre buscando eficiência,
-      escalabilidade e inovação.</p>
+    <h3 class="text-4xl font-bold">{{ $t("sobreMim") }}</h3>
+    <p class="text-2xl text-center max-w-5xl leading-relaxed ml-6 mr-6">{{ $t("textoSobreMim") }}</p>
   </section>
 
 
   <section id="experiencia"
     class="min-h-screen flex flex-col items-center justify-center dark:bg-gray-950 text-white gap-5 ">
-    <h2 class="text-4xl font-bold mb-8 mt-8 text-center">Experiência</h2>
+    <h2 class="text-4xl font-bold mb-8 mt-8 text-center">{{ $t("experiencia") }}</h2>
 
     <div class="relative border-l-2 border-green-500 ml-6 mr-6">
 
-      <!-- Item 1 -->
+
       <div class="mb-10 ml-6">
         <div class="absolute w-4 h-4 bg-green-500 rounded-full mt-1.5 -left-2"></div>
         <h3 class="text-xl font-semibold">2019-2019 - UNOESC</h3>
         <p class="mt-2  max-w-5xl leading-relaxed text-gray-300">
-          Aqui iniciei minha trajetória na área de tecnologia atuando como suporte técnico, realizando manutenções em
-          computadores e prestando assistência direta aos usuários da empresa, garantindo o bom funcionamento dos
-          sistemas e a continuidade das operações.
+          {{ $t("experienciaUnoesc") }}
         </p>
       </div>
 
-      <!-- Item 2 -->
+
       <div class="mb-10 ml-6">
         <div class="absolute w-4 h-4 bg-green-500 rounded-full mt-1.5 -left-2"></div>
         <h3 class="text-xl font-semibold">2019-2023 - Syscon Tecnologia</h3>
         <p class="mt-2  max-w-5xl leading-relaxed text-gray-300">
-          Minha primeira oportunidade na área de desenvolvimento de software. Atuei diretamente na manutenção e evolução
-          do sistema principal da empresa, sendo responsável por implementar novas integrações fiscais, além de realizar
-          ajustes e melhorias nas funcionalidades já existentes.
-
+          {{ $t("experienciaSyscon") }}
         </p>
       </div>
 
-      <!-- Item 3 -->
+
       <div class="mb-10 ml-6">
         <div class="absolute w-4 h-4 bg-green-500 rounded-full mt-1.5 -left-2"></div>
-        <h3 class="text-xl font-semibold">2023-Atualmente - Simetris Tecnologia</h3>
+        <h3 class="text-xl font-semibold">2023-{{ $t("atualmente") }} - Simetris Tecnologia</h3>
         <p class="mt-2  max-w-5xl leading-relaxed text-gray-300">
-          Participo ativamente da elaboração e criação de um novo sistema completo de gestão empresarial, assumindo a
-          responsabilidade pelo desenvolvimento back-end do projeto. Meu trabalho tem foco em garantir eficiência,
-          escalabilidade e inovação, contribuindo para a construção de uma solução robusta e preparada para atender às
-          necessidades do negócio.
+          {{ $t("experienciaSimetris") }}
         </p>
       </div>
 
     </div>
   </section>
   <section id="projetos" class="min-h-screen flex flex-col items-center justify-center dark:bg-black gap-12 px-6 py-12">
-    <h2 class="text-4xl font-bold text-white">Projetos</h2>
+    <h2 class="text-4xl font-bold text-white">{{ $t("projetos") }}</h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl w-full">
       <!-- Card 1 -->
@@ -167,7 +169,7 @@
           <path d="M9 13v2" />
         </svg>
         <h3 class="text-white text-xl font-semibold">DISCORD BOT</h3>
-        <p class="text-gray-200 mt-2">Integração para comunicação via Discord.</p>
+        <p class="text-gray-200 mt-2">{{ $t("discordDescricao") }}</p>
       </a>
 
       <!-- Card 2 -->
@@ -181,10 +183,10 @@
           <rect x="3" y="4" width="18" height="12" rx="2" />
         </svg>
         <h3 class="text-white text-xl font-semibold">PORTFÓLIO</h3>
-        <p class="text-gray-200 mt-2">Criação deste portfólio.</p>
+        <p class="text-gray-200 mt-2">{{ $t("portifolioDescricao") }}</p>
       </a>
 
-      <!-- Card 3 -->
+
       <a href="https://github.com/ismaellawrenz/todo-list-Angular"
         class="rounded-2xl bg-gray-600 p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 hover:bg-gray-700 transition-transform">
         <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none"
@@ -195,12 +197,12 @@
           <path d="m9 14 2 2 4-4" />
         </svg>
         <h3 class="text-white text-xl font-semibold">TODO LIST</h3>
-        <p class="text-gray-200 mt-2">Aplicação de lista de tarefas usando Angular.</p>
+        <p class="text-gray-200 mt-2">{{ $t("todoListDescricao") }}</p>
       </a>
     </div>
-    <h2 class="text-4xl font-bold text-white">Participações Open Source</h2>
+    <h2 class="text-4xl font-bold text-white">{{ $t("participacoesOpenSource") }}</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl w-full">
-      <!-- Card 1 -->
+
       <a href="https://github.com/Samuel-Oliveira/Java_CTe"
         class="rounded-2xl bg-gray-600 p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 hover:bg-gray-700 transition-transform">
         <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none"
@@ -211,10 +213,10 @@
           <path d="M9 18c-4.51 2-5-2-7-2" />
         </svg>
         <h3 class="text-white text-xl font-semibold">JAVA_CTe</h3>
-        <p class="text-gray-200 mt-2">Criado envio do CT-e modelo simplificado.</p>
+        <p class="text-gray-200 mt-2">{{ $t("javaCteDescricao") }}</p>
       </a>
 
-      <!-- Card 2 -->
+
       <a href="https://github.com/Samuel-Oliveira/Java_NFe"
         class="rounded-2xl bg-gray-600 p-6 flex flex-col items-center text-center shadow-lg hover:scale-105 hover:bg-gray-700 transition-transform">
         <svg xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 24 24" fill="none"
@@ -225,16 +227,16 @@
           <path d="M9 18c-4.51 2-5-2-7-2" />
         </svg>
         <h3 class="text-white text-xl font-semibold">JAVA_Nfe</h3>
-        <p class="text-gray-200 mt-2">Ajuste no envio de NF-e em contingência.</p>
+        <p class="text-gray-200 mt-2">{{ $t("javaNfeDescricao") }}</p>
       </a>
 
     </div>
   </section>
   <section id="habilidades" class="min-h-screen flex flex-col items-center justify-center dark:bg-gray-950 gap-12">
-    <h2 class="text-4xl font-bold text-white">Habilidades</h2>
+    <h2 class="text-4xl font-bold text-white">{{ $t("habilidades") }}</h2>
 
     <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
-      <!-- Card 1 -->
+
       <div
         class="relative w-40 h-40 bg-gray-600 rounded-xl flex items-center justify-center overflow-hidden hover:scale-115 hover:bg-gray-700 transition-transform">
 
@@ -372,8 +374,8 @@
   <section id="contato"
     class="min-h-[60vh] flex flex-col justify-center dark:bg-black text-white gap-5 px-6 sm:px-12 md:px-24 lg:px-90">
 
-    <h2 class="text-4xl font-bold text-white">Gostou do meu perfil?</h2>
-    <p class="text-2xl ">Sinta-se a vontade para entrar em contato.</p>
+    <h2 class="text-4xl font-bold text-white">{{ $t("gostouMeuPerfil") }}</h2>
+    <p class="text-2xl ">{{ $t("entrarContato") }}</p>
     <p class="text-gray-200 text-2xl">
       <b>Email: </b>
       <a href="mailto:ismaellawrenz@gmail.com">ismaellawrenz@gmail.com</a>
@@ -436,7 +438,8 @@
   }
 
   to {
-    width: 20ch;
+    /*width: 20ch;*/
+    width: calc(var(--characters) * 0.93ch);
   }
 
   /* tamanho do texto */
@@ -453,4 +456,15 @@
 import { ref } from 'vue'
 
 const isOpen = ref(false)
+
+
+const route = useRoute()
+
+function reloadToEnOrPt(language) {
+  let path = route.fullPath.replace(/^\/(pt|en)(?=\/|$)/, '')
+  if (!path.startsWith('/')) path = '/' + path
+  window.location.href = '/' + language + path 
+}
+
+
 </script>

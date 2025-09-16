@@ -1,0 +1,25 @@
+{
+  "sobre": "Sobre",
+  "experiencia": "Experiência",
+  "habilidades": "Habilidades",
+  "projetos": "Projetos",
+  "contato":"Contato",
+  "engenheiroSoftware":"Engenheiro de software",
+  "sobreMim":"Sober mim",
+  "textoSobreMim":"Bacharel em Ciência da Computação, apaixonado por desenvolvimento de software. Atuo principalmente como desenvolvedor back-end, com ampla experiência em integração entre sistemas e soluções fiscais (NF-e, NFC-e, CT-e, MDF-e, NFS-e e Sped Fiscal). Além disso, possuo experiência na criação e elaboração de novos sistemas, desde a concepção até a implementação, sempre buscando eficiência, escalabilidade e inovação.",
+  "experienciaUnoesc":"Aqui iniciei minha trajetória na área de tecnologia atuando como suporte técnico, realizando manutenções em computadores e prestando assistência direta aos usuários da empresa, garantindo o bom funcionamento dos sistemas e a continuidade das operações.",
+  "experienciaSyscon":"Minha primeira oportunidade na área de desenvolvimento de software. Atuei diretamente na manutenção e evolução do sistema principal da empresa, sendo responsável por implementar novas integrações fiscais, além de realizar ajustes e melhorias nas funcionalidades já existentes.",
+  "experienciaSimetris":"Participo ativamente da elaboração e criação de um novo sistema completo de gestão empresarial, assumindo a responsabilidade pelo desenvolvimento back-end do projeto. Meu trabalho tem foco em garantir eficiência, escalabilidade e inovação, contribuindo para a construção de uma solução robusta e preparada para atender às necessidades do negócio.",
+  "atualmente":"Atualmente",
+  "discordDescricao":"Integração para comunicação via Discord.",
+  "portifolioDescricao":"Criação deste portfólio.",
+  "todoListDescricao":"Aplicação de lista de tarefas usando Angular.",
+  "participacoesOpenSource":"Participações Open Source",
+  "javaCteDescricao":"Criado envio do CT-e modelo simplificado.",
+  "javaNfeDescricao":"Ajuste no envio de NF-e em contingência.",
+  "gostouMeuPerfil":"Gostou do meu perfil?",
+  "entrarContato":"Sinta-se a vontade para entrar em contato.",
+  "versaoIdioma":"English version",
+  "idioma":"en"
+  
+}
